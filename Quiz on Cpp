@@ -1,0 +1,322 @@
+#include<iostream>
+#include<conio.h>
+#include<stdio.h>
+#include<windows.h>
+#include<ctime>
+using namespace std; 
+class quiz
+{
+	char name[20],college[100],prof[20];
+	int age;
+	char choice1,choice2,choice3,choice4,choice5;
+	char a,b,c,d;
+	int count = 0;
+	int randomNumber,password,randomNumber2;
+	public:
+		void enter_your_details();
+		void instruction();
+		void answers();
+		void take_quiz();
+};
+void quiz :: enter_your_details()
+{
+	system("cls");
+	cout<<"\n\n\t\t\t\tWelcome to the quiz. Please follow through :)\n\n";
+	cout<<"\n\t\t\t\t\t[1] Enter your details.\n";
+	cout<<"\n\n\t\t\t\t\tEnter your name: ";
+	cin.ignore();
+	cin.getline(name,20);
+	cout<<"\t\t\t\t\tEnter your age: ";
+	cin>>age;
+	cout<<"\t\t\t\t\tEnter your college/School name: ";
+	cin.ignore();
+	cin.getline(college,100);
+	cout<<"\t\t\t\t\tEnter your profession: ";
+	cin.ignore();
+	cin.getline(prof,100);
+	srand((unsigned) time(0));
+    for (int index = 0; index<1; index++){
+    randomNumber = (rand() % 1000) + 1;
+    cout<<"\t\t\t\t\tPASSWORD[1]: "<<randomNumber<<"\t(## Remember it for your results.##)"<<endl;
+    }
+}
+void quiz :: instruction()
+{
+	system("cls");
+	cout<<"\n\n\n\t\t\t     Hello!  "<<name<<endl;
+	cout<<"\n\n\t\t\t[2] Introduction to rules of quiz.\n";
+	cout<<"\n\n\t****Here are the rules of the quiz. Read them carefully.****\n";
+	cout<<"\n\t-> 1. You have to fill your details first. (** IMPORTANT **) \n";
+	cout<<"\t-> 2. If you didn't fill your details please fill them first.\n";
+	cout<<"\t-> 3. You will get a ** password ** remember that to get your results \n\t      and another password for key to your answers at the end of results.\n";
+	cout<<"\t-> 4. There will be a total of 5 MCQ's. Press option '3' to go there.\n";
+	cout<<"\t-> 5. You have to select one option among them.\n";
+	cout<<"\t-> 6. Then press ENTER to proceed to next question.\n";
+	cout<<"\t-> 7. Same way complete your remaining questions.\n";
+	cout<<"\t-> 8. At last you can check your results.\n ";
+	cout<<"\t-> 9. You can check and refer to the answers by selecting option '4'.\n";
+	cout<<"\t-> 10. Remember you can get results of your quiz only if you fill your details (and get your password) \n\t       then only you can get key for your questions(from password you get after results).\n";		
+}
+void quiz :: answers()
+{
+	system("cls");
+	cout<<"\n\t\t\t[4] Solutions of the quiz.\n\n";
+	cout<<"\t\tType your password to get key for your answers:  ";
+	cin>>password;
+	if(password == randomNumber2)
+		{
+		cout<<"\n\t\t\tHello!  "<<name<<endl;
+		cout<<"\n\nYou have completed your quiz!, and here are the answers for your questions. \n";
+		cout<<"Check them out.";
+		cout<<"\n\n\t[1] Who is the developer of C++?\n\n";
+		cout<<"\ta) Denis Ritche\n";
+		cout<<"\tb) Bjarne Stroustrap\n";
+		cout<<"\tc) Guido van Rossum\n";
+		cout<<"\td) James Gosling\n";
+		cout<<"\n\t-> The correct answer is 'b'.";
+		cout<<"\nC++ was developed by Danish computer scientist Bjarne Stroustrup at Bell Labs since 1979 as an extension of the C \nlanguage.\n";
+		cout<<"\nPress enter for next answer....";
+		getch();
+		system("cls");
+		
+		cout<<"\n\n\t[2] What is the full form of OOPS?\n\n";
+		cout<<"\ta) Oriented Object for Programming System\n";
+		cout<<"\tb) Object Oriented programming Software\n";
+		cout<<"\tc) Object Oriented Programming System\n";
+		cout<<"\td) Object Orineted program\n";
+		cout<<"\n\t-> The correct answer is 'c'.";
+		cout<<"\nObject-oriented programming System(OOPs) is a programming paradigm based on the concept of 'object' that contain data \nand methods.\n";
+		cout<<"\nPress enter for next answer....";
+		getch();
+		system("cls");
+	
+		cout<<"\n\n\t[3] Which is not a correct variable type in C++\n\n";
+		cout<<"\ta) real\n";
+		cout<<"\tb) float\n";
+		cout<<"\tc) int\n";
+		cout<<"\td) double\n";
+		cout<<"\n\t-> The correct answer is 'a'.";
+		cout<<"\nint, float, double are different variable types in c++, but there is no variable type such as real.\n";
+		cout<<"\nPress enter for next answer....";
+		getch();
+		system("cls");
+	
+		cout<<"\n\n\t[4] Which operator is used as Logical 'AND'\n\n";
+		cout<<"\ta) Operator-&\n";
+		cout<<"\tb) Operator-||\n";
+		cout<<"\tc) Operator-&&\n";
+		cout<<"\td) Operator +\n";
+		cout<<"\n\t-> The correct answer is 'c'.";
+		cout<<"\nThe logical AND operator (&&) returns true if both operands are true and returns false otherwise.\n";
+		cout<<"\nPress enter for next answer....";
+		getch();
+		system("cls");
+	
+		cout<<"\n\n\t[5] The following operator is called  ?:\n\n";
+		cout<<"\ta) Scope resolution operator\n";
+		cout<<"\tb) Conditional operator\n";
+		cout<<"\tc) If else operator\n";
+		cout<<"\td) Ternary operator\n";
+		cout<<"\n\t-> The correct answer is 'd'.";
+		cout<<"\n?: is a ternary operator that is part of the syntax for basic conditional expressions in several programming languages.\n"; 
+		cout<<"It is commonly referred to as the conditional operator, inline if (iif), or ternary if. \n";
+		cout<<"An expression a ? b : c evaluates to b if the value of a is true, and otherwise to c .\n";
+		cout<<"\nPress enter for next answer....";
+		getch();
+		system("cls");
+	}else{
+		cout<<"\n\nWrong password!!";
+	}
+}
+void quiz :: take_quiz()
+{
+	system("cls");
+	cout<<"\n\n\tHello! "<<name<<endl;
+	cout<<"\n\t[3]Ready for quiz champ, the quiz starts now. Go ahead......\n\n";
+	cout<<"\n\n\t[1] Who is the developer of C++?\n\ta. Denis Ritche\n\tb. Bjarne Stroustrap\n\tc. Guido van Rossum\n\td. James Gosling\n";
+	cout<<"\nYour option ::  ";
+	cin>>choice1;
+	if(choice1 == 'b' || choice1 == 'B')
+	{
+		count = count+ 10;
+	}
+	cout<<"\nPress enter to continue....";
+	getch();
+	system("cls");
+	cout<<"\n\tHere's the 2nd question."<<endl;
+	cout<<"\n\n\n\t[2] What is the full form of OOPS?\n\ta. Oriented Object for Programming System\n\tb. Object Oriented programming Software\n\tc. Object Oriented Programming System\n\td. Object Orineted program\n";
+	cout<<"\nYour option ::  ";
+	cin>>choice2;
+	if(choice2 == 'c' || choice2 == 'C')
+	{
+		count = count+ 10;
+	}
+	cout<<"\nPress enter to continue....";
+	getch();
+	system("cls");
+	cout<<"\n\tHere's the 3rd question."<<endl;
+	cout<<"\n\n\n\t[3] Which is not a correct variable type in C++\n\ta. real\n\tb. float\n\tc. int\n\td. double\n";
+	cout<<"\nYour option ::  ";
+	cin>>choice3;
+	if(choice3 == 'a' || choice3 == 'A')
+	{
+		count = count+ 10;
+	}
+	cout<<"\nPress enter to continue....";
+	getch();
+	system("cls");
+	cout<<"\n\tHere's the 4th question."<<endl;
+	cout<<"\n\n\n\t[4] Which operator is used as Logical 'AND'\n\ta. Operator-&\n\tb. Operator-||\n\tc. Operator-&&\n\td. Operator +\n";
+	cout<<"\nYour option ::  ";
+	cin>>choice4;
+	if(choice4 == 'c' || choice4 == 'C')
+	{
+		count = count+ 10;
+	}
+	cout<<"\nPress enter to continue....";
+	getch();
+	system("cls");
+	cout<<"\n\tHere's the 5th question."<<endl;
+	cout<<"\n\n\n\t[5] The following operator is called  ?:\n\ta. Scope resolution operator\n\tb. Conditional operator\n\tc. If else operator\n\td. Ternary operator\n";
+	cout<<"\nYour option ::  ";
+	cin>>choice5;
+	if(choice5 == 'd' || choice5 == 'D')
+	{
+		count = count+ 10;
+	}
+	cout<<"\nWaiting for results, :) "<<endl;
+	cout<<"Type your password to get your results"<<endl;
+	cin>>password;
+	if(password == randomNumber)
+		{
+		for(int i=0;i<=100;i++)
+		{
+			
+			cout<<"\nLoading...";
+			cout<<i<<" %";
+			Sleep(50);
+			system("cls");
+		}
+		if (count == 50)
+		{	
+			cout<<"\n\n\n\t***********************************";
+			cout<<"\n\t*                                 *";
+			cout<<"\n\t*        Your score is "<<count<<"         *";
+			cout<<"\n\t*                                 *";
+			cout<<"\n\t***********************************\n\n";
+			cout<<"Brilliant, you aced it. You have answered all correct.\t ";
+			cout<<"\n\t\t:) :) :) :) :)\n";
+		}
+		else if (count == 40)
+		{
+			cout<<"\n\n\n\t***********************************";
+			cout<<"\n\t*                                 *";
+			cout<<"\n\t*        Your score is "<<count<<"         *";
+			cout<<"\n\t*                                 *";
+			cout<<"\n\t***********************************\n\n";
+			cout<<"Very good try, but you have answered one question wrong.\t ";
+			cout<<"\n\t\t:) :) :) :) :(\n";
+		}
+		else if (count == 30)
+		{
+			cout<<"\n\n\n\t***********************************";
+			cout<<"\n\t*                                 *";
+			cout<<"\n\t*        Your score is "<<count<<"         *";
+			cout<<"\n\t*                                 *";
+			cout<<"\n\t***********************************\n\n";
+			cout<<"Good try, but you have answered two question wrong.\t ";
+			cout<<"\n\t\t:) :) :) :( :(\n";
+		}
+		else if (count == 20)
+		{
+			cout<<"\n\n\n\t***********************************";
+			cout<<"\n\t*                                 *";
+			cout<<"\n\t*        Your score is "<<count<<"         *";
+			cout<<"\n\t*                                 *";
+			cout<<"\n\t***********************************\n\n";
+			cout<<"Can do better. You have answered two question correct.\t ";
+			cout<<"\n\t\t:) :) :( :( :(\n";
+		}
+		else if (count == 10)
+		{
+			cout<<"\n\n\n\t***********************************";
+			cout<<"\n\t*                                 *";
+			cout<<"\n\t*        Your score is "<<count<<"         *";
+			cout<<"\n\t*                                 *";
+			cout<<"\n\t***********************************\n\n";
+			cout<<"Try again. You have answered one question correct.\t ";
+			cout<<"\n\t\t:) :( :( :( :(\n";
+		}
+		else
+		{
+			cout<<"\n\n\n******  Try again!!!!!!  ******\n";
+		}
+	}else{
+		cout<<"\n\n\t\tWrong password!!";	
+	}
+	if(randomNumber != password)
+	{
+		cout<<" Please follow all the steps mentioned in the rules. ";
+	}else{
+	srand((unsigned) time(0));
+    for (int index = 0; index<1; index++){
+    randomNumber2 = (rand() % 1000) + 1;
+    cout<<"\n\n\nPASSWORD[2]: "<<randomNumber2<<"\t(## Remember it for getting your key to answers.##)"<<endl;
+	}
+}
+}
+
+int main()
+{
+	int ch;
+	char x;
+	quiz obj;
+	cout<<"\n\n\t\t\t\t\tWELCOME TO THE QUIZ ON C++"<<endl;
+	cout<<"\t\t\t\t     ================================\n\n";
+	cout<<"\t\t\t\tHello everyone, Hope you are well and safe."<<endl;
+	cout<<"\n\t\t\t\t\t  IT'S QUIZ TIME.....\n";
+	cout<<"\n\n ****** Please go through all the steps given below in order, to have a better experience of this quiz. ******\n";
+	cout<<" ``````````````````````````````````````````````````````````````````````````````````````````````````````````````";
+	do
+	{
+		cout<<"\n\n\t\t\t\t\t[1] Enter your details.\n";
+		cout<<"\t\t\t\t\t[2] Introduction of quiz.\n";
+		cout<<"\t\t\t\t\t[3] Go to quiz.\n";
+		cout<<"\t\t\t\t\t[4] Solutions of the quiz.\n";
+		cout<<"\t\t\t\t\t[5] Exit.\n";
+		cout<<"\n\t\t\t\t\tSelect the option from above:\t";
+		cin>>ch;
+		switch(ch)
+		{
+			case 1:
+				obj.enter_your_details();
+				break;
+			case 2:
+				obj.instruction();
+				break;
+			case 3:
+				obj.take_quiz();
+				break;
+			case 4:
+				obj.answers();
+				break;
+			case 5:
+				cout<<"Press n again\n";
+				if(ch == 6)			
+				{
+					exit(1);
+				}
+				break;
+			default:
+				cout<<"This is an invalid choice.\n";
+			}
+			cout<<"\n\n\nDo you want to select next option then press : y. \n";
+			cout<<"If you want to exit then press : n. \n\n";
+			x=getch();
+			if(x=='n' || x=='N')
+			exit(0);
+		}
+		while(x=='y' || x=='Y');		
+	getch();
+	return 0;
+}
