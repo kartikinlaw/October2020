@@ -25,6 +25,7 @@ cout<<"Here"<<endl;  //Here
 	cout<<&x<<endl; // adx
 	cout<<"address of x +  1 "<<&x + 1<<endl;  // adx + (1*4)  // suppose adx is 0x1235 then 0x1239
 
+
 	int a=5;  // ada
 	int b = 10; // adb
 	

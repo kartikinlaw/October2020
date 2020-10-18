@@ -20,7 +20,7 @@ int main() {
 
     //Pointers
 
-    int *xptr;  //addxptr
+    int * xptr;  //addxptr
     //Store the address of a variable
     xptr = &x; //xptr = adx
 
