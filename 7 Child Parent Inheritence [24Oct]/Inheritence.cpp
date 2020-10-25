@@ -12,7 +12,7 @@ class Parent
 
 	// protected:
 	// 	int noOflolilops=7;
-	}; 
+}; 
 
 // Sub class inheriting from Base Class(Parent) 
 class Child : public Parent 
